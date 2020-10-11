@@ -21,14 +21,9 @@ def start():
 		if sel[0] in selOptions:
 			if sel[0] == selOptions[1]:
 				print("\nYou have selected High/Low Guessing Game \n\nWhat would you like the maximum number to be?")
-				try:
-					maxHigh = input("\n> ")
-					print("\n\nStarting High/Low with a maximum of " + maxHigh + "\n.\n.\n.\n")
-					highLow.highLow(maxHigh)
-					print("\n\n\n.\n.\n.\n")
-					start()
-				except:
-					print("Invalid input!")
+				highLow.highLow()
+				print("\n\n\n.\n.\n.\n")
+				start()
 
 			elif sel[0] == selOptions[2]:
 				print("\nYou have selected Mad Lib \n.\n.\n.\n")

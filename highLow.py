@@ -1,8 +1,21 @@
 #####----- High/Low start -----#####
-def highLow(maximum):
+def highLow():
 	import random
 
-	maximum = int(maximum)
+	maximum = False
+
+	while maximum == False:
+		try:
+			maximum = int(input("\n> "))
+			if maximum == 1:
+				raise NameError
+			print("\n\nStarting High/Low with a maximum of " + str(maximum) + "\n.\n.\n.\n")
+		except (NameError):
+			print("\"1\" cannot be used as the maximum number!")
+			maximum = False
+		except:
+			print("Invalid input!")
+
 	number = random.randrange(0, maximum)
 	guessCount = 0
 	guessCheck = 0

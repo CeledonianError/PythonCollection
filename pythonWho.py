@@ -184,7 +184,6 @@ def pythonWho():
     choice = input("\n> ")
     if choice == options[1]:
       print("\n\n\n.\n.\n.\n")
-      start()
     else:
       print(".\n.\n.\n.\n.\n\n")
       beginning()
