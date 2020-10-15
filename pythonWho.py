@@ -4,6 +4,8 @@ def pythonWho():
 # Note that in this, if the user's input isn't one of the available options, it will (typically, there's some cases where the opposite is true) select the last option.
   options = ["1", "2", "3"]
 
+  print("")
+
   def beginning():
     print("It is a damp, foggy day. You're walking down an alleyway between two tall buildings. A wheezing wind starts to race past you, a rat scurries across the alley a few meters ahead. \nYou look up, the distant exit seems to shimmer and fade. \n\n[1] Turn back \n[2] Continue forward")
     choice = input("\n> ")

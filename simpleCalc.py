@@ -2,7 +2,7 @@
 def simpleCalc():
   while True:
     try:
-      print("Please input 2 numbers")
+      print("\nPlease input 2 numbers")
       inputNums = [int(input("\n> ")), int(input("> "))]
       options = ["A", "S", "D", "M", "E"]
       optionsLow = ["a", "s", "d", "m", "e"]
@@ -20,19 +20,19 @@ def simpleCalc():
         break
         # Addtion
       if selOp == options[0] or selOp == optionsLow[0]:
-        print("\n" + str(inputNums[0]) + " + " + str(inputNums[1]) + " = " + str(inputNums[0] + inputNums[1]) + "\n")
+        print("\n" + str(inputNums[0]) + " + " + str(inputNums[1]) + " = " + str(inputNums[0] + inputNums[1]))
         # Subtraction
       elif selOp == options[1] or selOp == optionsLow[1]:
-        print("\n" + str(inputNums[0]) + " - " + str(inputNums[1]) + " = " + str(inputNums[0] - inputNums[1]) + "\n")
+        print("\n" + str(inputNums[0]) + " - " + str(inputNums[1]) + " = " + str(inputNums[0] - inputNums[1]))
         # Division
       elif selOp == options[2] or selOp == optionsLow[2]:
-        print("\n" + str(inputNums[0]) + " / " + str(inputNums[1]) + " = " + str(inputNums[0] / inputNums[1]) + "\n")
+        print("\n" + str(inputNums[0]) + " / " + str(inputNums[1]) + " = " + str(inputNums[0] / inputNums[1]))
         # Multiplication
       elif selOp == options[3] or selOp == optionsLow[3]:
-        print("\n" + str(inputNums[0]) + " * " + str(inputNums[1]) + " = " + str(inputNums[0] * inputNums[1]) + "\n")
+        print("\n" + str(inputNums[0]) + " * " + str(inputNums[1]) + " = " + str(inputNums[0] * inputNums[1]))
         # Exponent
       elif selOp == options[4] or selOp == optionsLow[4]:
-        print("\n" + str(inputNums[0]) + "^" + str(inputNums[1]) + " = " + str(inputNums[0] ** inputNums[1]) + "\n")
+        print("\n" + str(inputNums[0]) + "^" + str(inputNums[1]) + " = " + str(inputNums[0] ** inputNums[1]))
       else:
         print("\"" + selOp + "\" is not an option!\n")
         prevError = True

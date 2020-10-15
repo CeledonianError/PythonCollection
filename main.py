@@ -4,58 +4,39 @@ import madLib
 import simpleCalc
 import pythonWho
 import massCalc
+import ticTacToe
 
 #####-----~@~-----#####
 def start():
-	print("Welcome to Error's Python Collection. \nPlease select a mini program. \n\n[1] High/Low Guessing Game \n[2] Mad Lib  \n[3] Simple Calculator \n[4] Python Who: Choose Your Own Adventure\n[5] Unknown Mass Calculator\n\nTo quit, type \"quit\"")
+	print("Welcome to Error's Python Collection. \nPlease select a mini program. \n\n[1] High/Low Guessing Game \n[2] Mad Lib  \n[3] Simple Calculator \n[4] Python Who: Choose Your Own Adventure\n[5] Unknown Mass Calculator\n[6] Tic Tac Toe\n\nTo quit, type \"quit\"")
 
-	selOptions = ["quit", "1", "2", "3", "4", "5"]
-	sel = [input("\n> ")]
+	selOptions = ["quit", "1", "2", "3", "4", "5", "6"]
+	sel = input("\n> ")
 	selQuit = False
+	selOptionsNames = ["", "High Low Guessing Game", "Mad Lib", "Simple Calculator", "Python Who: Choose Your Own Adventure", "Unknown Mass Calculator", "Tic Tac Toe"]
+	selFunctions = ["", highLow.highLow, madLib.madLib, simpleCalc.simpleCalc, pythonWho.pythonWho, massCalc.massCalc, ticTacToe.ticTacToe]
+	selNames = selOptionsNames[int(sel)]
 
 	while True:
-		if sel[0] not in selOptions:
+		if sel not in selOptions:
 			print("\nThat is not a valid option! Try again")
-			sel = [input("\n> ")]
+			sel = input("\n> ")
 
-		if sel[0] in selOptions:
-			if sel[0] == selOptions[1]:
-				print("\nYou have selected High/Low Guessing Game \n\nWhat would you like the maximum number to be?")
-				highLow.highLow()
-				print("\n\n\n.\n.\n.\n")
-				start()
+		print("\n.\n.\n.")
+		print("You have selected " + selNames)
+		print("\n-----~~~~~=~~~~~-----")
+		selFunctions[int(sel)]()
+		print("\n-----~~~~~=~~~~~-----\n")
+		start()
 
-			elif sel[0] == selOptions[2]:
-				print("\nYou have selected Mad Lib \n.\n.\n.\n")
-				madLib.madLib()
-				print("\n\n\n.\n.\n.\n")
-				start()
-
-			elif sel[0] == selOptions[3]:
-				print("\nYou have selected Simple Calculator\n.\n.\n.\n")
-				simpleCalc.simpleCalc()
-				print("\n\n\n.\n.\n.\n")
-				start()
-			elif sel[0] == selOptions[4]:
-				print("\nYou have selected Python Who: Choose Your Own Adventure\n.\n.\n.\n")
-				pythonWho.pythonWho()
-				print("\n\n\n.\n.\n.\n")
-				start()
-
-			elif sel[0] == selOptions[5]:
-				print("\nYou have selected Unknown Mass Calculator\n.\n.\n.\n")
-				massCalc.massCalc()
-				print("\n\n\n.\n.\n.\n")
-				start()
-				
+		if sel == "quit":
+			print("Are you sure you want to quit? Y/N")
+			selQuit = input("\n> ")
+			if selQuit == "Y" or selQuit == "y":
+				quit()
 			else:
-				print("Are you sure you want to quit? Y/N")
-				selQuit = input("\n> ")
-				if selQuit == "Y" or selQuit == "y":
-					quit()
-				else:
-					print("\n\n\n")
-					start()
+				print("\n\n\n")
+				start()
 #####-----~@~-----#####
 
 start()

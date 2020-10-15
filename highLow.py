@@ -5,6 +5,7 @@ def highLow():
 	maximum = False
 
 	while maximum == False:
+		print("\n\n\nWhat would you like the maximum number to be?")
 		try:
 			maximum = int(input("\n> "))
 			if maximum == 1:
