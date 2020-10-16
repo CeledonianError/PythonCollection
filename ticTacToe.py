@@ -121,7 +121,13 @@ def ticTacToe():
 			return True
 
 		# Check diagonals:
-		if checkDiagonal(0, 2, "{x}") or checkDiagonal(2, 0, "{x}"):
+		if checkDiagonal(0, 2, "{o}") or checkDiagonal(2, 0, "{o}"):
+			sayOWins()
+			return True
+
+		# Check columns:
+		if checkColumns(0, "{o}") or checkColumns(1, "{o}") or checkColumns(2, "{o}"):
+			print(namePlayerX + " wins!")
 			sayOWins()
 			return True
 
