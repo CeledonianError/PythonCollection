@@ -251,6 +251,7 @@ def regenAdventure():
   ##############################
 
   # Introduction:
+  os.system('cls' if os.name == 'nt' else 'clear')
   print("{&}-------------~=%#@[&{&}&]@#%=~------------{&}")
   print(" |                                            |")
   print(" |                You\'re dying.               |")
@@ -264,6 +265,7 @@ def regenAdventure():
   print(" |    Only the Sisterhood can save you now.   |")
   print(" |                                            |")
   print("{&}-------------~=%#@[&{&}&]@#%=~------------{&}")
+  print("\n   ~-={( Press \"Q\" at any time to quit )}=~-")
   pause = input("\n")
 
   printBoardMain()
@@ -273,7 +275,14 @@ def regenAdventure():
       try:
     ##### Movement start #####
         inputMove = getch.getch().lower()
-      ## Using WASD
+      ## Using WASD and Q
+
+        if inputMove == "q":
+          print("Are you sure you want to quit? Y/N")
+          quitConfirm = input("\n> ").lower()
+          if quitConfirm == "y":
+            break
+
       # Up
         if inputMove == "w":
           yPotential -= 1
@@ -290,7 +299,7 @@ def regenAdventure():
         elif inputMove == "d":
           xPotential += 1
 
-      # No other keys are used, so do nothing if the input is anything other than WASD:
+      # No other keys are used, so do nothing if the input is anything other than WASD or Q:
         else:
           None
       
@@ -605,4 +614,5 @@ def regenAdventure():
     
     # For testing only, comment out when done:
       #print(str(yCoordinate), str(yPotential), str(xCoordinate), str(xPotential))
-  ### Core while loop start ###
+
+  ### Core while loop end ###
