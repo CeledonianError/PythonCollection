@@ -7,6 +7,7 @@ import massCalc
 import ticTacToe
 import ultimateTicTacToe
 import regenAdventure
+import decayBoard
 
 #####-----~@~-----#####
 def start():
@@ -19,13 +20,14 @@ def start():
 	print("[6] Tic Tac Toe")
 	print("[7] Ultimate Tic Tac Toe")
 	print("[8] Regeneration: A Text-Based RPG")
+	print("[9] Five \'Till Decay: A Random Chance Board Game")
 	print("\nTo quit, type \"quit\"")
 
-	selOptions = ["quit", "1", "2", "3", "4", "5", "6", "7", "8"]
+	selOptions = ["quit", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 	sel = input("\n> ")
 	selQuit = False
-	selOptionsNames = ["", "High Low Guessing Game", "Mad Lib", "Simple Calculator", "Python Who: Choose Your Own Adventure", "Unknown Mass Calculator", "Tic Tac Toe", "Ultimate Tic Tac Toe", "Regeneration: A Text-Based RPG"]
-	selFunctions = ["", highLow.highLow, madLib.madLib, simpleCalc.simpleCalc, pythonWho.pythonWho, massCalc.massCalc, ticTacToe.ticTacToe, ultimateTicTacToe.ultimateTicTacToe, regenAdventure.regenAdventure]
+	selOptionsNames = ["", "High Low Guessing Game", "Mad Lib", "Simple Calculator", "Python Who: Choose Your Own Adventure", "Unknown Mass Calculator", "Tic Tac Toe", "Ultimate Tic Tac Toe", "Regeneration: A Text-Based RPG", "Five \'Till Decay: A Random Chance Board Game"]
+	selFunctions = ["", highLow.highLow, madLib.madLib, simpleCalc.simpleCalc, pythonWho.pythonWho, massCalc.massCalc, ticTacToe.ticTacToe, ultimateTicTacToe.ultimateTicTacToe, regenAdventure.regenAdventure, decayBoard.decayBoard]
 
 	while True:
 		if sel not in selOptions:
