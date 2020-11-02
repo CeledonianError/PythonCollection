@@ -72,8 +72,6 @@ def decayBoard():
 			# Check for lines of 5
 			if board[row][i] == "Ⓧ" and board[row][i + 1] == "Ⓧ":
 				success += 1
-			if board[row][i] == "□" or board[row][i] == "▅" and success > 0:
-				success -= 1
 			if success >= 4:
 				return True
 
@@ -89,8 +87,6 @@ def decayBoard():
 			# Check for lines of 5
 			if board[i][col] == "Ⓧ" and board[i + 1][col] == "Ⓧ":
 				success += 1
-			if board[i][col] == "□" or board[i][col] == "▅" and success > 0:
-				success -= 1
 			if success >= 4:
 				return True
 
